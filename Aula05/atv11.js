@@ -8,7 +8,6 @@ livro = {
 }
 livro.idadeDePublicação = anoAtual - livro.anoDePublicação
  
- 
 livro.gênero = "Aventura"
  
 console.log(livro) 
