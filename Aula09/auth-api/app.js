@@ -8,7 +8,7 @@ const authRoutes = require('./routes/authRoutes');
 app.use(express.json());
 app.use('/api/auth', authRoutes);
 
-mongoose.connect(process.env,MONGO_URI,{
+mongoose.connect(process.env.MONGO_URI,{
     useNewUrlparser: true,
     useUnifiedTopology: true
 })

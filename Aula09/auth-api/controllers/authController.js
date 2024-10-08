@@ -8,7 +8,7 @@ exports.register = async (req, res) => {
     try{
         const hashedPassword = await bcrypt.hash(password, 10);
         
-        const user = newUser = new User ({ username, password: hashedPassword});
+        const newUser = new User ({ username, password: hashedPassword});
         await newUser.save();
         res.status(201).json({ message: 'Usuário registrado com sucesso' });
         } catch (error) {
@@ -31,6 +31,7 @@ exports.login = async (req, res) => {
 
         res.json({ token });
     }catch (error) {
-        res.status(400).json({ message: 'Erro ao realizar login' });
+        console.error(error)
+        res.status(500).json({ error: 'Erro ao fazer login' });
     }
     };
