@@ -43,3 +43,13 @@ export default {
     },   
 };
 </script>
+
+<style scoped>
+.login {
+    max-width: 400px;
+    margin: 0 auto;
+    padding: 20px;
+    border: 1px solid #ccc;
+    text-align: center;
+}
+</style>
